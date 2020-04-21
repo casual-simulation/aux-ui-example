@@ -2,8 +2,57 @@
 <html>
     <head>
         <title>Getting Started</title>
+
+        <style>
+            :root {
+                --container-padding: 8px;
+            }
+
+            .app {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+
+            .container {
+                padding: var(--container-padding);
+                display: flex;
+            }
+
+            .footer {
+                position: absolute;
+                bottom: var(--container-padding);
+                left: var(--container-padding);
+                right: var(--container-padding);
+            }
+
+            .bot-list-container,
+            .action-list-container {
+                flex: 1 1 auto;
+                overflow-y: auto;
+            }
+
+            .bot-list li,
+            .action-list li {
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
     </head>
     <body>
-        <div id="app"></div>
+        <div id="app" class="app">
+            <div id="container" class="container">
+                <div class="bot-list-container">
+                    <p>Bots</p>
+                    <ul id="botList" class="bot-list"></ul>
+                </div>
+                <div class="action-list-container">
+                    <p>Actions</p>
+                    <ul id="actionList" class="action-list"></ul>
+                </div>
+            </div>
+            <div id="footer" class="footer">
+                <div id="status">Connecting...</div>
+                <a id="link" target="_blank" href="#">Open in auxplayer.com</a>
+            </div>
+        </div>
     </body>
 </html>

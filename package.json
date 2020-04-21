@@ -19,9 +19,11 @@
     },
     "homepage": "https://github.com/casual-simulation/aux-ui-example#readme",
     "devDependencies": {
+        "@babel/core": "^7.9.0",
         "@babel/preset-env": "^7.9.5",
         "@babel/preset-typescript": "^7.9.0",
         "@types/jest": "^25.2.1",
+        "@types/uuid": "^7.0.2",
         "clean-webpack-plugin": "^3.0.0",
         "html-webpack-plugin": "^4.2.0",
         "husky": "^4.2.5",
@@ -44,6 +46,7 @@
         "@casual-simulation/aux-common": "^1.0.25",
         "@casual-simulation/aux-vm": "^1.0.25",
         "@casual-simulation/aux-vm-browser": "^1.0.25",
-        "rxjs": "^6.5.5"
+        "rxjs": "^6.5.5",
+        "uuid": "^7.0.3"
     }
 }

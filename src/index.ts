@@ -9,17 +9,31 @@ import {
     isBotInDimension,
 } from '@casual-simulation/aux-common';
 import { Subscription } from 'rxjs';
+import { first } from 'rxjs/operators';
+import uuid from 'uuid/v4';
 
 async function start() {
+    const app = document.getElementById('app');
+    const botList = document.getElementById('botList');
+    const actionList = document.getElementById('actionList');
+    const status = document.getElementById('status');
+    const link = document.getElementById('link') as HTMLAnchorElement;
+
+    // Create the user for this session.
+    // This tells AUX what ID to use for the player bot
+    // and how this session can be reached via remote() actions.
     const user = {
-        id: 'myUserId',
+        id: uuid(),
         username: 'username',
         name: 'name',
         token: 'token',
         isGuest: false,
     };
 
+    // The ID of the universe that we are going to load.
+    //
     const universeID = 'http://localhost:3000/dummy/unviverseId';
+    link.href = 'https://auxplayer.com?auxUniverse=universeId';
 
     const config = {
         version: 'v1.0.0',
@@ -37,24 +51,22 @@ async function start() {
 
     await sim.init();
 
-    const app = document.getElementById('app');
-    const div = document.createElement('div');
-    const pre = document.createElement('pre');
-
-    app.appendChild(div);
-    app.appendChild(pre);
-
     let subs = [] as Subscription[];
 
-    // sim.helper.transaction(
-    //     botAdded(
-    //         createBot(undefined, {
-    //             myCustomFunction: `@player.toast("hi")`,
-    //         }, 'tempLocal')
-    //     )
-    // );
+    let initialized = false;
+    let wasSynced = false;
 
     subs.push(
+        sim.connection.syncStateChanged.subscribe((synced) => {
+            if (synced) {
+                if (!initialized) {
+                    initialize();
+                    initialized = true;
+                }
+            }
+            status.innerText = synced ? 'Connected!' : 'Disconnected.';
+            wasSynced = synced;
+        }),
         sim.watcher.botsDiscovered.subscribe((bots) => {
             updateDivText();
         }),
@@ -65,30 +77,29 @@ async function start() {
             updateDivText();
         }),
         sim.localEvents.subscribe((event) => {
-            if (event.type === 'show_toast') {
-                pre.innerText = event.message;
-            }
+            const li = document.createElement('li');
+            li.innerText = `${event.type}`;
+            actionList.appendChild(li);
         })
     );
 
     function updateDivText() {
-        while (div.firstChild) {
-            div.removeChild(div.firstChild);
+        while (botList.firstChild) {
+            botList.removeChild(botList.firstChild);
         }
 
-        const calc = sim.helper.createContext();
         for (let bot of sim.helper.objects) {
-            if (!isBotInDimension(calc, bot, 'home')) {
-                continue;
-            }
-            const btn = document.createElement('button');
-            btn.addEventListener('click', () => {
-                sim.helper.action('onClick', null);
-            });
-            btn.innerText = `${bot.values.auxLabel}: ${getBotSpace(bot)}`;
-
-            div.appendChild(btn);
+            const li = document.createElement('li');
+            li.innerText = bot.id;
+            botList.appendChild(li);
         }
+    }
+
+    function initialize() {
+        // TODO: Run any initialization code that you want.
+        // Some Examples:
+        // 1. Create a local temporary bot that contains some custom code
+        // 2. Update the player bot with some login information
     }
 
     function cleanup() {

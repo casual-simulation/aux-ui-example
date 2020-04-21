@@ -1,0 +1,43 @@
+name: Continuous Integration
+
+on: [push, pull_request]
+
+jobs:
+    test:
+        name: Test
+        strategy:
+            matrix:
+                os: [ubuntu-latest, macOS-latest, windows-latest]
+                node-version: [12.x]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install and test
+              run: |
+                  yarn
+                  yarn jest --detectOpenHandles --forceExit --no-cache
+              env:
+                  CI: true
+    build:
+        name: Build
+        strategy:
+            matrix:
+                os: [ubuntu-latest, macOS-latest, windows-latest]
+                node-version: [12.x]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: install and build
+              run: |
+                  yarn
+                  yarn build
+              env:
+                  CI: true

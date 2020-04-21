@@ -805,12 +805,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@casual-simulation/aux-common@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-common/-/aux-common-1.0.25.tgz#99485b4605778a9478b360429eda1aa8df73cba2"
-  integrity sha512-j92gdUH3Rmsn4F2NzFf50Sj10fB3KKaQNYjA/r0bJ0zHvjEXo/Rc1ZsKY2MoiHNvMUW+LxtTO4dufV/tIDAw2g==
+"@casual-simulation/aux-common@^1.0.25", "@casual-simulation/aux-common@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-common/-/aux-common-1.0.26.tgz#ea7aa2e35b97a9b773d11dcdc8f4d7bf0070c8f4"
+  integrity sha512-lJ5P6L0VCzoesfW8QFnSuBrrx8D6A8NL/bT3qrUViPUZJ0PTtJ2WcLLDw4xwPcjYVD5V8rWo+XN4c7mGmINZ+g==
   dependencies:
-    "@casual-simulation/causal-trees" "^1.0.24"
+    "@casual-simulation/causal-trees" "^1.0.26"
     "@casual-simulation/crypto" "^1.0.24"
     "@types/acorn" "^4.0.5"
     "@types/astring" "^1.3.0"
@@ -825,15 +825,15 @@
     zone.js "0.10.3"
 
 "@casual-simulation/aux-vm-browser@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-vm-browser/-/aux-vm-browser-1.0.25.tgz#540f6264a627f72bf81596690201d4dcd813cecb"
-  integrity sha512-t+wP32oIBJL24tWFww79sQ8JvKWfb60W2poTkRm9f/yfuan/LEeryuoW3ir5EomlFNlCVozVK9jRrtmbmXmlWA==
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-vm-browser/-/aux-vm-browser-1.0.26.tgz#6f893d970bf64a494365dba7bfce962a3555c032"
+  integrity sha512-UcWAXa1MFP6vXr1wmQEuqLFIj4zmc8SeD/uFDngklSpYhszai10wxAhCBAwp5pM8/b/3Q3gPnqOWOj1AeGP00g==
   dependencies:
-    "@casual-simulation/aux-common" "^1.0.25"
-    "@casual-simulation/aux-vm" "^1.0.25"
-    "@casual-simulation/aux-vm-client" "^1.0.25"
-    "@casual-simulation/causal-tree-client-socketio" "^1.0.24"
-    "@casual-simulation/causal-trees" "^1.0.24"
+    "@casual-simulation/aux-common" "^1.0.26"
+    "@casual-simulation/aux-vm" "^1.0.26"
+    "@casual-simulation/aux-vm-client" "^1.0.26"
+    "@casual-simulation/causal-tree-client-socketio" "^1.0.26"
+    "@casual-simulation/causal-trees" "^1.0.26"
     "@casual-simulation/crypto" "^1.0.24"
     "@casual-simulation/crypto-browser" "^1.0.24"
     comlink "^4.0.1"
@@ -842,15 +842,15 @@
     socket.io-client "2.2.0"
     uuid "^3.3.2"
 
-"@casual-simulation/aux-vm-client@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-vm-client/-/aux-vm-client-1.0.25.tgz#cb2800a41dca12e5267c75cea90e1b50d10e1fbb"
-  integrity sha512-HU9r2SetaSjqE/zM30uNpIwnQ5hucGfqRaAK8FZBcenSOqfBNHAP/9uApW1x9ZovWT3kYM4rswIhjP0HQTj8XQ==
+"@casual-simulation/aux-vm-client@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-vm-client/-/aux-vm-client-1.0.26.tgz#97f01a7934c7ca33383bff744e578f6190e13120"
+  integrity sha512-lEH8vYJ4NUXdoK7k0rrnlvhaEQB+kzhmB0zwxAh1zVho8UU7uQbiw3s5OsgOo3kZXuwb8wVgIQSw99WWv2k3Cg==
   dependencies:
-    "@casual-simulation/aux-common" "^1.0.25"
-    "@casual-simulation/aux-vm" "^1.0.25"
-    "@casual-simulation/causal-tree-client-socketio" "^1.0.24"
-    "@casual-simulation/causal-trees" "^1.0.24"
+    "@casual-simulation/aux-common" "^1.0.26"
+    "@casual-simulation/aux-vm" "^1.0.26"
+    "@casual-simulation/causal-tree-client-socketio" "^1.0.26"
+    "@casual-simulation/causal-trees" "^1.0.26"
     "@casual-simulation/crypto" "^1.0.24"
     axios "^0.18.1"
     lodash "^4.17.14"
@@ -858,35 +858,35 @@
     socket.io-client "2.2.0"
     uuid "^3.3.2"
 
-"@casual-simulation/aux-vm@^1.0.25":
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-vm/-/aux-vm-1.0.25.tgz#632f14633acae2055b8fad85f7acc53e3787950d"
-  integrity sha512-YlLUfhMDQI4T2KJXI/1RCvY8dCRTKvuILV3sCoYyojnUX9e/p2Qdf9y1BV27qC/EKtklxZhEKcEuHM45+tOFEw==
+"@casual-simulation/aux-vm@^1.0.25", "@casual-simulation/aux-vm@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@casual-simulation/aux-vm/-/aux-vm-1.0.26.tgz#31bf4090d3c4fca38a0f4fc9c80e9993349143ea"
+  integrity sha512-LkOqjFl4SiVxROrMeyGe+w6+xzEDrmrVN+zuFPC4hg1A0KKtEln+QACa99NtqcihrwjKPhHE46DjuCyhvF5N3w==
   dependencies:
-    "@casual-simulation/aux-common" "^1.0.25"
-    "@casual-simulation/causal-tree-client-socketio" "^1.0.24"
-    "@casual-simulation/causal-trees" "^1.0.24"
+    "@casual-simulation/aux-common" "^1.0.26"
+    "@casual-simulation/causal-tree-client-socketio" "^1.0.26"
+    "@casual-simulation/causal-trees" "^1.0.26"
     "@casual-simulation/crypto" "^1.0.24"
     lodash "^4.17.14"
     rxjs "^6.5.2"
     uuid "^3.3.2"
 
-"@casual-simulation/causal-tree-client-socketio@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@casual-simulation/causal-tree-client-socketio/-/causal-tree-client-socketio-1.0.24.tgz#9981014c75f3f19e936f95d43276bf1d3fe1fb2f"
-  integrity sha512-xck4Wvpi8iBCafaXqZLIGfhoLc8ae8nWEnt4aA2SquHe2kdBU+phXZ8P88gMhNkuI6/jXvQtxI0P8N2VTMF0fg==
+"@casual-simulation/causal-tree-client-socketio@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@casual-simulation/causal-tree-client-socketio/-/causal-tree-client-socketio-1.0.26.tgz#1b38303ed3fd5c963ae15f6dc62a57beb4940ee4"
+  integrity sha512-ofDC5gOh7rzRznxRv8nhbkOgJutgQIGBBOe/IAHXamKoj1S1c1uPcn4AFZE9fjDxtEVt09OaylxhN7ibnDBnPA==
   dependencies:
-    "@casual-simulation/causal-trees" "^1.0.24"
+    "@casual-simulation/causal-trees" "^1.0.26"
     "@casual-simulation/crypto" "^1.0.24"
     "@casual-simulation/crypto-browser" "^1.0.24"
     "@types/socket.io-client" "^1.4.32"
     rxjs "^6.5.2"
     socket.io-client "2.2.0"
 
-"@casual-simulation/causal-trees@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@casual-simulation/causal-trees/-/causal-trees-1.0.24.tgz#e34bb00788bd1652c2d0b86b8af016d7062dff2d"
-  integrity sha512-PkDSJ3plJHGQA/2CUsBipbcJbKHZnawVAhpAOe+bc18lMlIeLKHVeB0PWancgyQMtt6ZDnaOittL1y2hlSAPTA==
+"@casual-simulation/causal-trees@^1.0.26":
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@casual-simulation/causal-trees/-/causal-trees-1.0.26.tgz#9cf83735a5bb4a4a90a705ad1551b671856972a4"
+  integrity sha512-OS+Dh9AhTuhW+2WavCamt7VX9js7ccFPXtIVGz93gBnqf3GJEw8/AO1cK6IloDlOdC/93AJ3PPJZyzKLsPo3Zg==
   dependencies:
     "@casual-simulation/crypto" "^1.0.24"
     "@types/base64-js" "^1.2.5"
@@ -1793,9 +1793,9 @@ babel-jest@^25.4.0:
     slash "^3.0.0"
 
 babel-plugin-dynamic-import-node@^2.3.0:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.2.tgz#14fb5accb300f9aac0151949f6192259f1403c4a"
-  integrity sha512-yvczAMjbc73xira9yTyF1XnEmkX8QwlUhmxuhimeMUeAaA6s7busTPRVDzhVG7eeBdNcRiZ/mAwFrJ9It4vQcg==
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
+  integrity sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==
   dependencies:
     object.assign "^4.1.0"
 
@@ -5284,9 +5284,9 @@ multimatch@^4.0.0:
     minimatch "^3.0.4"
 
 nan@^2.12.1:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
-  integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.1.tgz#d7be34dfa3105b91494c3147089315eff8874b01"
+  integrity sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
 
 nanomatch@^1.2.9:
   version "1.2.13"

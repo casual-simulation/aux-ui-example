@@ -2,6 +2,10 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// This file contains common webpack settings that are shared
+// between development and production.
+// Most webpack settings are in this file.
+
 module.exports = {
     // We have two entry points.
     // One for our UI client and one
@@ -40,9 +44,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
-    },
-    devServer: {
-        contentBase: './dist',
     },
 
     plugins: [

@@ -26,7 +26,7 @@ async function start() {
     // The ID of the universe that we are going to load.
     // Because we're loading from a separate auxPlayer, we
     // have to include the full URL.
-    const universeID = 'https://auxplayer.com?auxUniverse=universeId';
+    const universeID = 'https://auxplayer.com?story=universeId';
     link.href = universeID;
 
     // The configuration that tells the universe some information

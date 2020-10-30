@@ -47,9 +47,9 @@
         }
     },
     "dependencies": {
-        "@casual-simulation/aux-common": "^1.0.25",
-        "@casual-simulation/aux-vm": "^1.0.25",
-        "@casual-simulation/aux-vm-browser": "^1.0.25",
+        "@casual-simulation/aux-common": "^1.2.19",
+        "@casual-simulation/aux-vm": "^1.2.19",
+        "@casual-simulation/aux-vm-browser": "^1.2.19",
         "rxjs": "^6.5.5",
         "uuid": "^7.0.3"
     }
